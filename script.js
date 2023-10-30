@@ -37,4 +37,6 @@ function eraseText() {
     }
 }
 
+
+
 setTimeout(typeText, 0); // Délai avant de démarrer l'animation
