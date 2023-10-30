@@ -9,19 +9,19 @@ function typeText() {
         if (currentIndex < textToDisplay.length) {
             textElement.textContent += textToDisplay.charAt(currentIndex);
             currentIndex++;
-            setTimeout(typeText, 100); // Délai entre l'affichage de chaque lettre (100ms)
+            setTimeout(typeText, 100); 
         } else {
             isReversing = true;
-            setTimeout(eraseText, 1000); // Délai avant d'effacer le texte
+            setTimeout(eraseText, 1000); 
         }
     } else {
         if (currentIndex > 0) {
             currentIndex--;
             textElement.textContent = textToDisplay.substr(0, currentIndex);
-            setTimeout(typeText, 100); // Délai entre la suppression de chaque lettre (100ms)
+            setTimeout(typeText, 100);
         } else {
             isReversing = false;
-            setTimeout(typeText, 1000); // Délai avant de recommencer
+            setTimeout(typeText, 1000); 
         }
     }
 }
@@ -30,13 +30,13 @@ function eraseText() {
     if (currentIndex > 0) {
         currentIndex--;
         textElement.textContent = textToDisplay.substr(0, currentIndex);
-        setTimeout(eraseText, 100); // Délai entre la suppression de chaque lettre (100ms)
+        setTimeout(eraseText, 100); 
     } else {
         isReversing = false;
-        setTimeout(typeText, 1000); // Délai avant de recommencer
+        setTimeout(typeText, 1000); //
     }
 }
 
 
 
-setTimeout(typeText, 0); // Délai avant de démarrer l'animation
+setTimeout(typeText, 0); 
